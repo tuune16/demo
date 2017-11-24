@@ -1,0 +1,93 @@
+* {
+    margin: 0;
+}
+
+.main {
+    width: 100%;
+    height: 100vh;
+}
+
+p {
+    color: rgba(0, 0, 0, 0.5);
+    font-size: 180px;
+    height: 30vh;
+    text-align: center;
+    font-family: 'Rajdhani', sans-serif;
+    z-index: -2;
+}
+
+.main:hover > .box {
+    opacity: 0.5;
+    transition: 1s;
+}
+
+.main:hover > .box:hover {
+    opacity: 1;
+    transition: 1s;
+}
+
+.box {
+    width: 25%;
+    height: 100%;
+    float: left;
+    text-align: center;
+}
+
+
+
+.apple {
+    width: 100%;
+    margin-top: 30%;
+    transition: 1s;
+    text-align: center;
+}
+
+.apple:hover {
+    width: 15%;
+    margin-top: 120%;
+    transition: 1s;
+}
+
+
+.giraffe {
+    width: 80%;
+    margin-top: 10%;
+    margin-left: 20%;
+    transition: 1s;
+}
+
+.giraffe:hover {
+    width: 200%;
+    transition: 1s;
+    margin-top: -200%;
+}
+
+.tower {
+    width: 60%;
+    transition: 1s;
+}
+
+.tower:hover {
+    width: 250%;
+    transition: 1s;
+    margin-top: -450%;
+    margin-left: -70%;
+}
+
+.tower:hover > .human {
+    width: 40%;
+    transition: 1s;
+    margin-top: -450%;
+}
+
+.human-box {
+    width: 25%;
+    height: 100%;
+    float: left;
+    text-align: center;
+}
+
+.human {
+    width: 45%;
+    margin-top: 8%;
+}

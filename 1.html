@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="ja">
+<!--めも-->
+
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="1.css">
+    <link href="https://fonts.googleapis.com/css?family=Bad+Script" rel="stylesheet">
+
+    <title>Document</title>
+</head>
+
+<body>
+   
+<!--   ロード中の画面-->
+    <div id="loader-bg">
+        <div id="loader">
+            <img src="pink1.jpeg" width="80" height="80" alt="Now Loading..." />
+            <p>Now Loading...</p>
+        </div>
+    </div>
+
+    <div id="main">
+        <h1>DEMO1</h1>
+
+        <div class="blocks">
+
+            <div class="block left">
+                <div class="content">
+                    <div class="text">
+                        <h3>PROFILE</h3>
+                        <p>intro intro intro intro intro intro intro intro intro intro intro intro intro intro intro</p>
+                    </div>
+                    <img src="blue3.jpeg" alt="" width="400">
+                </div>
+                <h2>LEFT</h2>
+            </div>
+
+            <div class="block right">
+                <h2>RIGHT</h2>
+                <div class="content">
+                    <div class="text">
+                        <h3>WORKS</h3>
+                        <p>intro intro intro intro intro intro intro intro intro intro intro intro intro intro intro</p>
+                    </div>
+                    <img src="pink2.jpeg" alt="" width="400">
+                </div>
+            </div>
+
+        </div>
+        <!--
+        
+        <img src="cake.png" alt="" width="400" class="main-image">
+-->
+    </div>
+
+   
+<!--   ロード画面のJQuery-->
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+    <script>
+        $(function() {
+            var h = $(window).height();
+
+            $('#main').css('display', 'none');
+            $('#loader-bg ,#loader').height(h).css('display', 'block');
+        });
+
+        $(window).load(function() { //全ての読み込みが完了したら実行
+            $('#loader-bg').delay(900).fadeOut(800);
+            $('#loader').delay(600).fadeOut(300);
+            $('#main').css('display', 'block');
+        });
+
+        //10秒たったら強制的にロード画面を非表示
+        $(function() {
+            setTimeout('stopload()', 10000);
+        });
+
+        function stopload() {
+            $('#main').css('display', 'block');
+            $('#loader-bg').delay(900).fadeOut(800);
+            $('#loader').delay(600).fadeOut(300);
+        }
+
+    </script>
+
+</body>
+
+</html>

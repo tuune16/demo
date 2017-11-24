@@ -1,0 +1,138 @@
+* {
+    margin: 0;
+    font-family: 'Bad Script', cursive;
+}
+
+.navi {
+    padding: 20px;
+    height: 100px;
+}
+
+.navi-title {
+    color: #fff;
+    font-size: 30px;
+    padding: 0px 30px;
+    background: #c8a2ed;
+    border-radius: 5%;
+    float: left;
+}
+
+.navi-title:hover {
+    background: #9b72c3;
+    transition: 0.5s;
+}
+
+#open {
+    float: left;
+}
+
+li {
+    list-style: none;
+    float: left;
+    margin: 0 20px;
+}
+
+a {
+    text-decoration: none;
+    font-size: 20px;
+    color: #000;
+}
+
+#main-visual {
+    width: 100%;
+    height: 620px;
+/*
+    border-top-left-radius: 0px;
+    border-top-right-radius: 400px;
+    border-bottom-left-radius: 400px;
+    border-bottom-right-radius: 0px;
+*/
+    overflow: hidden;
+    position: relative;
+    color: #fff;
+    margin: 0 auto;
+}
+
+.overlay {
+    position: absolute;
+    width: 100%;
+    height: 620px;
+    background-color: rgba(0, 0, 0, 0.35);
+    background-blend-mode: overlay;
+    z-index: -5;
+}
+
+#slideshow {
+   position: relative;
+   width:  100%;
+   height: 620px;
+   z-index: -10;
+   overflow: hidden;
+}
+
+#slideshow img {
+   position: absolute;
+   top: 0;
+   left:0;
+   z-index: 8;
+   opacity: 0.0;
+}
+
+#slideshow img.active {
+   z-index: 10;
+   opacity: 1.0;
+}
+
+#slideshow img.last-active {
+   z-index: 9;
+}
+
+.title {
+    font-size: 80px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 3;
+}
+
+.cat-icon {
+    position: absolute;
+    bottom: 0%;
+    left: 50%;
+    transform: translate(-50%, 0%);
+    z-index: 3;
+}
+
+.container {
+    width: 90%;
+    margin: 5%;
+    height: 1000px;
+}
+
+
+/*可変正方形ブロック*/
+.square {
+    position: relative;
+    width: 27%;
+    overflow: hidden;
+    margin: 3%;
+    float: left;
+}
+
+.square:before {
+    content:"";
+    display: block;
+    padding-top: 100%; /* 高さを幅の◯%に固定 */
+}
+
+.square-img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+}
+
+
+

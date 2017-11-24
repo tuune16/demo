@@ -1,0 +1,164 @@
+* {
+    margin: 0;
+    font-family: 'Bad Script', cursive;
+}
+
+#loader-bg {
+/*    デフォルトは非表示*/
+  display: none;
+    
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  top: 0px;
+  left: 0px;
+  background: #000;
+  z-index: 2;
+}
+
+#loader {
+/*    デフォルトは非表示*/
+  display: none;
+    
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  width: 200px;
+  height: 200px;
+  margin-top: -100px;
+  margin-left: -100px;
+  text-align: center;
+    
+/*    pの文字の色*/
+  color: #fff;
+  z-index: 3;
+}
+
+
+#main {
+    width: 100%;
+    height: 600px;
+    position: relative;
+}
+
+#main h1 {
+    text-align: center;
+}
+
+.blocks {
+    width: 100%;
+    height: 550px;
+}
+
+.block {
+    width: 50%;
+    height: 550px;
+    float: left;
+    transition: 0.5s;
+    position: relative;
+}
+
+.block h2 {
+    font-size: 100px;
+    color: #fff;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    -webkit-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    -o-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+    transition: 0.5s;
+    z-index: 1;
+}
+
+.blocks:hover>.block {
+    width: 10%;
+    transition: 0.5s;
+}
+
+.blocks:hover>.block:hover {
+    width: 90%;
+    transition: 0.5s;
+}
+
+.blocks:hover>.block:hover h2 {
+    opacity: 0;
+    transition: 0.5s;
+}
+
+.blocks:hover>.block h2 {
+    opacity: 0;
+    transition: 0.5s;
+}
+
+.blocks:hover>.block:hover .content {
+    opacity: 1;
+    transition: 0.5s;
+}
+
+/*
+.blocks:hover>.block .content {
+    opacity: 0;
+    transition: 0.5s;
+}
+*/
+
+.left {
+    background: #a1cdef;
+    border-right: 10px solid white;
+    box-sizing:border-box;
+}
+
+.right {
+    background: #ebb9d8;
+}
+
+.content {
+    width: 700px;
+    height: 300px;
+    float: left;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    -webkit-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    -o-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+    
+    opacity: 0;
+}
+
+.text {
+    width: 200px;
+    float: left;
+    padding: 20px;
+}
+
+.text h3 {
+    color: #fff;
+    font-size: 40px;
+}
+
+.text p {
+    color: #fff;
+    font-size: 24px;
+}
+
+.content img {
+    float: left;
+    padding: 20px;
+}
+
+/*
+.main-image {
+    position: absolute;
+    top: 55%;
+    left: 50%;
+    -webkit-transform: translate(-50%, -45%);
+    -ms-transform: translate(-50%, -45%);
+    -o-transform: translate(-50%, -45%);
+    transform: translate(-50%, -45%);
+    z-index: 2;
+}
+*/

@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="ja">
+<!--めも-->
+
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="3.css">
+    <link href="https://fonts.googleapis.com/css?family=Bad+Script" rel="stylesheet">
+
+    <title>Document</title>
+
+    <script type="text/javascript" src="http://code.jquery.com/jquery-1.11.3.min.js"></script>
+</head>
+
+<body>
+
+    <div class="top">
+
+        <div class="navi">
+            <div onclick="obj=document.getElementById('open').style; obj.display=(obj.display=='none')?'block':'none';">
+                <a style="cursor:pointer;" class="navi-title">menu</a>
+            </div>
+
+            <div id="open" style="display:none;clear:both;">
+                <ul>
+                    <li><a href="#">pink photos</a></li>
+                    <li><a href="#">blue photos</a></li>
+                    <li><a href="#">yellow photos</a></li>
+                    <li><a href="#">green photos</a></li>
+                </ul>
+            </div>
+
+        </div>
+
+    </div>
+
+    <div id="main-visual">
+
+        <div class="overlay"></div>
+
+        <p class="title">
+            Slide Show
+        </p>
+        <img src="cat.png" alt="" class="cat-icon" width="40%">
+        <div id="slideshow">
+            <img src="pink1.jpeg" alt="image1" width="1260" class="active">
+            <img src="pink2.jpeg" alt="image2" width="1260">
+            <img src="pink3.jpg" alt="image3" width="1260">
+<!--
+            <img src="blue1.jpg" alt="image4" width="1260">
+            <img src="blue2.jpeg" alt="image5" width="1260">
+            <img src="blue3.jpeg" alt="image6" width="1260">
+            <img src="yellow1.jpg" alt="image7" style="transform: scale(-1, 1);" width="1260">
+            <img src="yellow2.jpg" alt="image8" width="1260">
+-->
+        </div>
+
+        <script type="text/javascript">
+            function slideSwitch() {
+                var $active = $('#slideshow img.active');
+
+                if ($active.length == 0) $active = $('#slideshow img:last');
+
+                var $next = $active.next().length ? $active.next() : $('#slideshow img:first');
+
+                $active.addClass('last-active');
+
+                $next.css({
+                        opacity: 0.0
+                    })
+                    .addClass('active')
+                    .animate({
+                        opacity: 1.0
+                    }, 1000, function() {
+                        $active.removeClass('active last-active');
+                    });
+            }
+            $(function() {
+                setInterval("slideSwitch()", 3000);
+            });
+
+        </script>
+    </div>
+    
+    <div class="container">
+        <div class="square">
+            <img src="yellow1.jpg" alt="" class="square-img" width="200%">
+        </div>
+        <div class="square">
+            <img src="yellow2.jpg" alt="" class="square-img" width="200%">
+        </div>
+        
+        <div class="square">
+            <img src="yellow3.jpg" alt="" class="square-img" width="200%">
+        </div>
+        <div class="square">
+            <img src="blue1.jpg" alt="" class="square-img" width="200%">
+        </div>
+        <div class="square">
+            <img src="blue2.jpeg" alt="" class="square-img" width="200%">
+        </div>
+        
+        <div class="square">
+            <img src="blue3.jpeg" alt="" class="square-img" width="200%">
+        </div>
+    </div>
+
+
+
+</body>
+
+</html>
